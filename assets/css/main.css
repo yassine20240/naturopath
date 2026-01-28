@@ -1,57 +1,70 @@
-
-/* Fonts */
+ /* =========================
+   FONTS
+========================= */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* =========================
+   GLOBAL COLORS – NO WHITE
+========================= */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #555555; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #3fbbc0; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #e3f6f5;       /* Turquoise très clair */
+  --default-color: #2f3e3e;          /* Texte gris foncé */
+  --heading-color: #1f5f5d;          /* Titres */
+
+  --accent-color: #2fb7b3;           /* Turquoise principal */
+  --accent-color-soft: #c9eeec;      /* Cartes / sections */
+  --accent-color-dark: #1e8e8b;      /* Hover */
+
+  --surface-color: #c9eeec;          /* Cards / boxes */
+  --contrast-color: #ffffff;         /* Texte sur accent foncé */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* =========================
+   NAVIGATION COLORS
+========================= */
 :root {
-  --nav-color: #444444;  /* The default color of the main navmenu links */
-  --nav-hover-color: #3fbbc0; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #3fbbc0; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #2f3e3e;
+  --nav-hover-color: var(--accent-color-dark);
+  --nav-mobile-background-color: #d8f2f0;
+  --nav-dropdown-background-color: #d8f2f0;
+  --nav-dropdown-color: #2f3e3e;
+  --nav-dropdown-hover-color: var(--accent-color-dark);
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
+/* =========================
+   COLOR PRESETS
+========================= */
 .light-background {
-  --background-color: #f7fcfc;
-  --surface-color: #ffffff;
-}
-
-.dark-background {
-  --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
+  --background-color: #d8f2f0;
+  --surface-color: #c1e9e6;
 }
 
 .accent-background {
-  --background-color: #3fbbc0;
+  --background-color: #2fb7b3;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #65c9cd;
+  --surface-color: #57cfc9;
 }
 
-/* Smooth scroll */
+.dark-background {
+  --background-color: #134e4c;
+  --default-color: #e8ffff;
+  --heading-color: #ffffff;
+  --surface-color: #1b6d6a;
+  --contrast-color: #ffffff;
+}
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
 :root {
   scroll-behavior: smooth;
 }
+
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -223,8 +236,31 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-  /* height: 10vh; */
+  height: 15vh;
 }
+.header .logo img {
+  /* ============== */
+  max-height: 80px;
+  margin-right: 8px;
+}
+
+
+@media (max-width: 768px) {
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  height: 10vh;
+}
+.header .logo img {
+  /* ============== */
+  max-height: 60px;
+  margin-right: 8px;
+}
+}
+
 
 .header .topbar {
   background-color: var(--accent-color);
@@ -243,11 +279,7 @@ h6 {
   line-height: 1;
 }
 
-.header .logo img {
-  /* ============== */
-  /* max-height: 126px; */
-  margin-right: 8px;
-}
+
 
 .header .logo h1 {
   font-size: 30px;
@@ -408,7 +440,7 @@ h6 {
     left: 20px;
     right: 20px;
 
-    height: 50vh;                /* 🔥 نصف طول الشاشة */
+    height: 33vh;                /* 🔥 نصف طول الشاشة */
     padding: 30px 0;             /* يعطي تنفّس ويوسّط بصرياً */
     margin: 0;
 
@@ -953,67 +985,59 @@ section,
     margin-right: 20px;
   }
 }
+
 /*--------------------------------------------------------------
 # Featured Services Section
 --------------------------------------------------------------*/
-.featured-services .service-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
-  transition: all 0.3s ease-in-out;
-  height: 100%;
+
+  .service-item{
+  background:var(--accent-color);
+  padding:25px;
+  /* border-radius:8px; */
+  box-shadow:0 0 20px rgba(0,0,0,.08);
+}
+
+.service-header{
   position: relative;
-  z-index: 1;
+  padding-right: 40px;
+  cursor: pointer;
 }
 
-.featured-services .service-item:before {
-  content: "";
-  position: absolute;
-  background: var(--accent-color);
-  inset: 100% 0 0 0;
-  transition: all 0.3s;
-  z-index: -1;
+.service-header .left{
+  display:inline-flex;
+  gap:15px;
+  align-items:center;
 }
 
-.featured-services .service-item .icon {
-  margin-bottom: 10px;
+.service-header h4{
+  margin:0;
+  font-size:18px;
 }
 
-.featured-services .service-item .icon i {
-  color: var(--accent-color);
-  font-size: 36px;
-  transition: ease-in-out 0.3s;
+.toggle{
+  position:absolute;
+  right:0;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:26px;
+  transition:transform .3s;
 }
 
-.featured-services .service-item h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 20px;
+.service-content{
+  display:none;
+  margin-top:15px;
+  font-size:14px;
+  line-height:1.7;
 }
 
-.featured-services .service-item h4 a {
-  color: var(--heading-color);
-  transition: ease-in-out 0.3s;
+.service-item.active .service-content{
+  display:block;
 }
 
-.featured-services .service-item p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-  transition: ease-in-out 0.3s;
+.service-item.active .toggle{
+  transform:translateY(-50%) rotate(90deg);
 }
 
-.featured-services .service-item:hover h4 a,
-.featured-services .service-item:hover .icon i,
-.featured-services .service-item:hover p {
-  color: var(--contrast-color);
-}
-
-.featured-services .service-item:hover:before {
-  background: var(--accent-color);
-  inset: 0;
-  border-radius: 0px;
-}
 
 /*--------------------------------------------------------------
 # Call To Action Section
