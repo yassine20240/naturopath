@@ -8,55 +8,60 @@
 }
 
 /* =========================
-   GLOBAL COLORS – NO WHITE
+   GLOBAL COLORS
+   Background BEIGE
+   Accent = SAGE (buttons only)
 ========================= */
-:root { 
-  --background-color: #e3f6f5;       /* Turquoise très clair */
-  --default-color: #2f3e3e;          /* Texte gris foncé */
-  --heading-color: #1f5f5d;          /* Titres */
+:root {
 
-  --accent-color: #2fb7b3;           /* Turquoise principal */
-  --accent-color-soft: #c9eeec;      /* Cartes / sections */
-  --accent-color-dark: #1e8e8b;      /* Hover */
+  /* ===== Backgrounds ===== */
+  --background-color: #f7f6f2;   /* Beige clair (site كامل) */
+  --surface-color: #ffffff;      /* Cards / boxes */
 
-  --surface-color: #c9eeec;          /* Cards / boxes */
-  --contrast-color: #ffffff;         /* Texte sur accent foncé */
+  /* ===== Text ===== */
+  --default-color: #3a4a42;      /* Texte */
+  --heading-color: #2f3f37;      /* Titres */
+
+  /* ===== Accent (SAGE) ===== */
+  --accent-color: #9db5a3;       /* Boutons */
+  --accent-color-dark: #7f9c88;  /* Hover boutons */
+  --accent-color-soft: #e4ebe6;  /* Hover léger */
+
+  --contrast-color: #ffffff;
 }
 
 /* =========================
    NAVIGATION COLORS
 ========================= */
 :root {
-  --nav-color: #2f3e3e;
-  --nav-hover-color: var(--accent-color-dark);
-  --nav-mobile-background-color: #d8f2f0;
-  --nav-dropdown-background-color: #d8f2f0;
-  --nav-dropdown-color: #2f3e3e;
-  --nav-dropdown-hover-color: var(--accent-color-dark);
+  --nav-color: #3a4a42;
+  --nav-hover-color: var(--accent-color);
+
+  --nav-mobile-background-color: #f7f6f2;
+  --nav-dropdown-background-color: #f7f6f2;
+
+  --nav-dropdown-color: #3a4a42;
+  --nav-dropdown-hover-color: var(--accent-color);
 }
 
 /* =========================
-   COLOR PRESETS
+   OPTIONAL PRESETS
+   (استعملهم غير إلا احتجتي)
 ========================= */
 .light-background {
-  --background-color: #d8f2f0;
-  --surface-color: #c1e9e6;
-}
-
-.accent-background {
-  --background-color: #2fb7b3;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #57cfc9;
+  --background-color: #f7f6f2;
+  --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #134e4c;
-  --default-color: #e8ffff;
+  --background-color: #2f3f37;
+  --default-color: #eef3ef;
   --heading-color: #ffffff;
-  --surface-color: #1b6d6a;
+  --surface-color: #425a4f;
   --contrast-color: #ffffff;
 }
+
+ 
 
 /* =========================
    SMOOTH SCROLL
@@ -1009,9 +1014,10 @@ section,
   align-items:center;
 }
 
-.service-header h4{
+.service-header a{
+  color:var(--heading-color) !important;
   margin:0;
-  font-size:18px;
+  font-size:18px  !important;
 }
 
 .toggle{
