@@ -196,11 +196,11 @@
 
 
  
-  document.querySelectorAll('.service-item').forEach(item => {
-    item.querySelector('.service-header').addEventListener('click', () => {
-      item.classList.toggle('active');
-    });
-  });
+  // document.querySelectorAll('.service-item').forEach(item => {
+  //   item.querySelector('.service-header').addEventListener('click', () => {
+  //     item.classList.toggle('active');
+  //   });
+  // });
  
 
 
