@@ -994,11 +994,21 @@ section,
 /*--------------------------------------------------------------
 # Featured Services Section
 --------------------------------------------------------------*/
-
+@media (min-width: 768px) {
   .service-item{
   background:var(--accent-color);
   padding:25px;
-  /* border-radius:8px; */
+    height: 260px;
+  box-shadow:0 0 20px rgba(0,0,0,.08);
+}
+
+
+}
+
+ .service-item{
+  background:var(--accent-color);
+  padding:25px;
+    /* height: 260px; */
   box-shadow:0 0 20px rgba(0,0,0,.08);
 }
 
@@ -1018,11 +1028,18 @@ align-items: center;
 }
 
 .service-header a{
-  color:var(--heading-color) !important;
+  color:var(--accent-color-soft) !important;
   margin:0;
   font-size:18px  !important;
 }
-
+.link_services_details{
+  color:var(--nav-color); text-decoration: underline;
+}
+.link_services_details:hover{
+  transition: all 0.4s;
+ 
+  color:var(--contrast-color);
+}
 .toggle{
   position:absolute;
   right:0;
