@@ -205,7 +205,20 @@
 
 
 
+document.querySelectorAll('.toggle-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const content = button.closest('.service-item').querySelector('.service-content');
+    const symbol = button.querySelector('.toggle-symbol');
 
+    if (content.style.display === 'none' || content.style.display === '') {
+      content.style.display = 'block';
+      symbol.textContent = '-';
+    } else {
+      content.style.display = 'none';
+      symbol.textContent = '+';
+    }
+  });
+});
 
 
 
