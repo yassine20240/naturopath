@@ -226,4 +226,45 @@ document.querySelectorAll('.toggle-button').forEach(button => {
 
 
 
+
+
+  document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Stop normal form submission
+
+    // Get values
+    var name = document.getElementById("name").value;
+    var subject = document.getElementById("subject").value;
+    var message = document.getElementById("message").value;
+  if (name === "" || subject === "" || message === "") {
+        alert("Veuillez remplir tous les champs !");
+        return; // stop execution
+    }
+    // Format WhatsApp message
+    var whatsappMessage = 
+      "Nom: " + name + "%0A" +
+      "Sujet: " + subject + "%0A" +
+      "Message: " + message;
+
+    // WhatsApp number (Morocco format without +)
+    var phoneNumber = "212600681265";
+
+    // Redirect to WhatsApp
+    var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + whatsappMessage;
+
+    window.open(whatsappURL, "_blank");
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })();

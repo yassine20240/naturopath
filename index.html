@@ -711,7 +711,7 @@
             <div class="info-item d-flex flex-column align-items-center">
               <i class="bi bi-telephone"></i>
               <h3>Téléphone</h3>
-              <p>Afficher le numéro de téléphone</p>
+              <p>+212 6 00 68 12 65</p>
             </div>
           </div>
 
@@ -735,22 +735,23 @@
 
         </div>
       </div>
-
+  <!-- <div class="col-md-6">
+              <input type="email" name="email" class="form-control" placeholder="Votre email" required>
+            </div>-->
       <!-- Formulaire -->
       <div class="col-lg-6">
-        <form action="forms/contact.php" method="post" class="php-email-form">
+        <form   class="php-email-form"   id="whatsappForm">
           <div class="row gy-4">
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+            <div class="col-md-12">
+              <input type="text"   id="name" name="name" class="form-control" placeholder="Votre nom" required>
             </div>
-            <div class="col-md-6">
-              <input type="email" name="email" class="form-control" placeholder="Votre email" required>
+          
+
+            <div class="col-md-12"> 
+              <input type="text" id="subject" name="subject" class="form-control" placeholder="Sujet" required>
             </div>
             <div class="col-md-12">
-              <input type="text" name="subject" class="form-control" placeholder="Sujet" required>
-            </div>
-            <div class="col-md-12">
-              <textarea name="message" rows="4" class="form-control" placeholder="Message" required></textarea>
+              <textarea name="message" id="message" rows="4" class="form-control" placeholder="Message" required></textarea>
             </div>
             <div class="col-md-12 text-center">
               <button type="submit">Envoyer</button>
